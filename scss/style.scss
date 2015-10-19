@@ -1,0 +1,100 @@
+/* Required Variables */
+$grid-container-width: 1240px;
+$phone-width: 350px;
+$tablet-width: 650px;
+$desktop-width: 950px;
+$white: #fff;
+
+@import "mixins/normalize";
+@import "mixins/material-design-colors";
+@import "mixins/lanes";
+@import "mixins/shadows";
+@import "mixins/social-media-colors";
+
+/* Media Queries Mixin */
+@mixin phone {
+  @media (max-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+/* ==========================================================================
+   Vars
+   ========================================================================== */
+
+
+
+
+
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+/* 1, Added color inherit, text-decoration none and standard transition time for links */
+/* 2 removed list styles for menu lists */
+
+a {
+  color: inherit; /*[1]*/
+  text-decoration: none; /*[1]*/
+  transition: all 0.5s; /*[1]*/
+}
+   
+ul {
+  list-style: none; /*[2]*/
+  padding: 0; /*[2]*/
+  margin: 0; /*[2]*/
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Main Styles
+   ========================================================================== */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+
+
+
+
+/* ==========================================================================
+   Medium & Up Media Queries
+   ========================================================================== */
+@media screen and (min-width: $tablet-width + 1) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Mobile Media Queries
+   ========================================================================== */
+@media screen and (max-width: $tablet-width) {
+}

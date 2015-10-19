@@ -1,0 +1,140 @@
+/* Grid */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: $grid-container-width;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.row {
+  &.equal-height {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.columns {
+  float: left;
+  width: 100%;
+  &.col-sm-6 {
+    margin-left: 1.5%;
+    width: 49.25%;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+  &.centered {
+    float: none;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* medium and up */
+@media (min-width: #{$tablet-width}) {
+  .container {
+    width: 100%;
+  }
+  .columns {
+    margin-left: 1.5%;
+    &.col-md-1 {
+      width: 6.95%;
+    }
+    &.col-md-2 {
+      width: 15.41%;
+    }
+    &.col-md-3 {
+      width: 23.87%;
+    }
+    &.col-md-4 {
+      width: 32.33%;
+    }
+    &.col-md-5 {
+      width: 40.79%;
+    }
+    &.col-md-6 {
+      width: 49.25%;
+    }
+    &.col-md-7 {
+      width: 57.70%;
+    }
+    &.col-md-8 {
+      width: 66.16%;
+    }
+    &.col-md-9 {
+      width: 74.62%;
+    }
+    &.col-md-10 {
+      width: 83.08%;
+    }
+    &.col-md-11 {
+      width: 91.54%;
+    }
+    &.col-md-12 {
+      width: 100%; /*not needed but for uniformity*/
+    }
+  }
+}
+
+/* large and up */
+@media (min-width: #{$desktop-width})  {
+  .columns {
+    margin-left: 1.5%;
+    &.col-lg-1 {
+      width: 6.95%;
+    }
+    &.col-lg-2 {
+      width: 15.41%;
+    }
+    &.col-lg-3 {
+      width: 23.87%;
+    }
+    &.col-lg-4 {
+      width: 32.33%;
+    }
+    &.col-lg-5 {
+      width: 40.79%;
+    }
+    &.col-lg-6 {
+      width: 49.25%;
+    }
+    &.col-lg-7 {
+      width: 57.70%;
+    }
+    &.col-lg-8 {
+      width: 66.16%;
+    }
+    &.col-lg-9 {
+      width: 74.62%;
+    }
+    &.col-lg-10 {
+      width: 83.08%;
+    }
+    &.col-lg-11 {
+      width: 91.54%;
+    }
+    &.col-lg-12 {
+      width: 100%; /*not needed but for uniformity*/
+    }
+  }
+}
