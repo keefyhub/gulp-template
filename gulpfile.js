@@ -2,6 +2,7 @@
 var gulp = require('gulp');
  // Include plugins
 var autoprefixer = require('gulp-autoprefixer');
+var cache = require('gulp-cache');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var sass = require('gulp-sass');
@@ -11,11 +12,12 @@ var assets = "./build/"
 
 // Gulp Test
 gulp.task('test', function () {
-    console.log('Gulp is working!');
+    console.log("Gulp is working! Proceed with tasks...");
 });
 
 // Clear Cache
 gulp.task('clear', function (done) {
+    console.log("Cleared cache.");
     return cache.clearAll(done);
 });
 
@@ -32,7 +34,7 @@ gulp.task('sass', function() {
   gulp.src('./scss/style.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ["last 3 version", "> 1%", "ie 8"],
             cascade: false
         }))
     .pipe(gulp.dest(assets +'css'));
@@ -50,9 +52,9 @@ gulp.task('watch', function() {
    // Watch .js files
   gulp.watch('./js/*.js', ['scripts']);
    // Watch .scss files
-  gulp.watch('./scss/style.scss', ['sass']);
+  gulp.watch('./scss/**/*', ['sass']);
    // Watch image files
-  gulp.watch('./images/**/*', ['images']);
+  gulp.watch('./images/**', ['images']);
 });
 
 // Default Task

@@ -7,9 +7,10 @@ $white: #fff;
 
 @import "mixins/normalize";
 @import "mixins/material-design-colors";
-@import "mixins/lanes";
 @import "mixins/shadows";
 @import "mixins/social-media-colors";
+//@import "mixins/animate";
+@import "mixins/lanes";
 
 /* Media Queries Mixin */
 @mixin phone {

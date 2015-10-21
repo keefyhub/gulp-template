@@ -15,7 +15,7 @@ npm install --save-dev
 ```
 gulp test
 ```
-this should console.log 'Gulp is working!'
+this should console.log "Gulp is working! Proceed with tasks..."
 
 ##Run default
 ```
